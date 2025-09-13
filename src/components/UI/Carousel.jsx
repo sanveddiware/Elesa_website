@@ -49,7 +49,7 @@ const Carousel = ({ items, interval = 3000 }) => {
   }, [current, slides.length, transitioning]);
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto my-6 overflow-hidden rounded-2xl shadow-2xl">
+    <div className="relative w-full max-w-6xl mx-auto my-6 overflow-hidden rounded-none sm:rounded-xl shadow-2xl">
       {/* Slides */}
       <div
         ref={containerRef}
@@ -64,7 +64,7 @@ const Carousel = ({ items, interval = 3000 }) => {
             <img
               src={item}
               alt={`Slide ${idx}`}
-              className="w-full h-[500px] object-cover"
+              className="w-full h-48 sm:h-72 md:h-[500px] object-cover rounded-none sm:rounded-xl"
             />
           </div>
         ))}
@@ -73,21 +73,21 @@ const Carousel = ({ items, interval = 3000 }) => {
       {/* Left Button */}
       <button
         onClick={prev}
-        className="absolute top-1/2 left-6 -translate-y-1/2 w-14 h-14 flex items-center justify-center bg-black/60 text-white rounded-full shadow-lg"
+        className="absolute top-1/2 left-3 sm:left-6 -translate-y-1/2 w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center bg-black/60 text-white rounded-full shadow-lg"
       >
-        <ChevronLeft size={28} />
+        <ChevronLeft size={24} className="sm:size-28" />
       </button>
 
       {/* Right Button */}
       <button
         onClick={next}
-        className="absolute top-1/2 right-6 -translate-y-1/2 w-14 h-14 flex items-center justify-center bg-black/60 text-white rounded-full shadow-lg"
+        className="absolute top-1/2 right-3 sm:right-6 -translate-y-1/2 w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center bg-black/60 text-white rounded-full shadow-lg"
       >
-        <ChevronRight size={28} />
+        <ChevronRight size={24} className="sm:size-28" />
       </button>
 
       {/* Dots */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+      <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
         {items.map((_, idx) => {
           // calculate active dot index
           const activeIndex =
@@ -101,8 +101,8 @@ const Carousel = ({ items, interval = 3000 }) => {
             <button
               key={idx}
               onClick={() => setCurrent(idx + 1)} // +1 because 0 is cloned last
-              className={`w-3 h-3 rounded-full transition-colors ${
-                idx === activeIndex ? "bg-white/80" : "bg-gray-500/50"
+              className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors ${
+                idx === activeIndex ? "bg-white/90" : "bg-gray-500/50"
               }`}
             />
           );

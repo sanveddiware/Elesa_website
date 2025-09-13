@@ -17,15 +17,18 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Keep font size same, only add color & font-weight for active link
   const linkClass = ({ isActive }) =>
     `text-xl transition ${
-      isActive ? "text-4xl bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent " : "text-white hover:text-blue-400"
+      isActive
+        ? "bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent font-semibold"
+        : "text-white hover:text-blue-400"
     }`;
 
   const mobileLinkClass = ({ isActive }) =>
-    `block px-4 py-2 text-xl transition ${
-      isActive ? "text-blue-400" : "text-white hover:bg-white/10"
+    `block px-4 py-3 text-lg transition ${
+      isActive
+        ? "bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent font-semibold"
+        : "text-white hover:bg-white/10"
     }`;
 
   return (
@@ -55,7 +58,7 @@ const Navbar = () => {
               Electrovert
             </NavLink>
             <NavLink to="/gallery" className={linkClass}>
-              Gallery
+              Events
             </NavLink>
             <NavLink to="/contact" className={linkClass}>
               Contact
@@ -71,30 +74,36 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Dropdown */}
-      {isOpen && (
-        <div
-          className={`md:hidden transition-all duration-300 ${
-            scrolled ? "bg-white/20 backdrop-blur-md" : "bg-transparent"
-          }`}
-        >
-          <NavLink to="/" className={mobileLinkClass}>
+      {/* Mobile Drawer */}
+      <div
+        className={`fixed top-0 right-0 h-full w-64 
+          bg-gradient-to-br from-black/90 via-gray-900/80 to-black/60 
+          backdrop-blur-md transform transition-transform duration-300 ease-in-out md:hidden
+          ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+      >
+        <div className="flex justify-end p-4">
+          <button onClick={toggleMenu} className="text-white">
+            <X size={28} />
+          </button>
+        </div>
+        <div className="flex flex-col mt-8 space-y-2">
+          <NavLink to="/" className={mobileLinkClass} onClick={() => setIsOpen(false)}>
             Home
           </NavLink>
-          <NavLink to="/about" className={mobileLinkClass}>
+          <NavLink to="/about" className={mobileLinkClass} onClick={() => setIsOpen(false)}>
             About
           </NavLink>
-          <NavLink to="/events" className={mobileLinkClass}>
+          <NavLink to="/events" className={mobileLinkClass} onClick={() => setIsOpen(false)}>
             Events
           </NavLink>
-          <NavLink to="/gallery" className={mobileLinkClass}>
+          <NavLink to="/gallery" className={mobileLinkClass} onClick={() => setIsOpen(false)}>
             Gallery
           </NavLink>
-          <NavLink to="/contact" className={mobileLinkClass}>
+          <NavLink to="/contact" className={mobileLinkClass} onClick={() => setIsOpen(false)}>
             Contact
           </NavLink>
         </div>
-      )}
+      </div>
     </nav>
   );
 };
