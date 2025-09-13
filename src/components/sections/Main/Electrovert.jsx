@@ -6,4 +6,4 @@ function Electrovert() {
   )
 }
 
-export default Electrovert
+export default Electrovert;

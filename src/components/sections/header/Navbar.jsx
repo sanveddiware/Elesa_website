@@ -64,10 +64,10 @@ const Navbar = () => {
               About
             </NavLink>
             <NavLink to="/events" className={linkClass}>
-              Electrovert
-            </NavLink>
-            <NavLink to="/gallery" className={linkClass}>
               Events
+            </NavLink>
+            <NavLink to="/electrovert" className={linkClass}>
+              Electrovert
             </NavLink>
             <NavLink to="/contact" className={linkClass}>
               Contact
@@ -105,8 +105,8 @@ const Navbar = () => {
           <NavLink to="/events" className={mobileLinkClass} onClick={() => setIsOpen(false)}>
             Events
           </NavLink>
-          <NavLink to="/gallery" className={mobileLinkClass} onClick={() => setIsOpen(false)}>
-            Gallery
+          <NavLink to="/electrovert" className={mobileLinkClass} onClick={() => setIsOpen(false)}>
+            Electrovert
           </NavLink>
           <NavLink to="/contact" className={mobileLinkClass} onClick={() => setIsOpen(false)}>
             Contact

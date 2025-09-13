@@ -1,6 +1,7 @@
 import React from 'react'
 import Carousel from '../../UI/Carousel'
 import TrueFocus from '../../UI/Truefocus'
+import CircularGallery from '../../UI/CircularGallary';
 
 function Home() {
   return (
@@ -35,6 +36,22 @@ function Home() {
           className="rounded-xl shadow-2xl border-4 border-red-500"
         />
       </div>
+
+      <h1 className="text-6xl font-extrabold bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 bg-clip-text text-transparent mb-4 text-center">
+        Activities
+      </h1>
+      <div style={{ height: "600px", width: "100%", position: "relative" }}>
+  <CircularGallery
+    bend={1} 
+    textColor="#ffffff"
+    borderRadius={0.05}
+    scrollEase={0.02}
+    items={8}   // increase number of images
+    radius={5}  // adjust radius to spread images
+  />
+</div>
+
+
     </div>
   )
 }
