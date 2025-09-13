@@ -5,7 +5,6 @@ import MainLayout from "./components/layout/MainLayout";
 import Home from "./components/sections/Main/home.jsx";
 import About from "./components/sections/Main/About.jsx";
 import Electrovert from "./components/sections/Main/Electrovert.jsx";
-import Gallery from "./components/sections/Main/Gallery.jsx";
 import Contact from "./components/sections/Main/Contact.jsx";
 
 
@@ -15,6 +14,7 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
+import Events from './components/sections/Main/Events.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,7 +22,7 @@ const router = createBrowserRouter(
       <Route path="" element={<Home />} />  
       <Route path="about" element={<About />} />
       <Route path="events" element={<Electrovert />} />
-      <Route path="gallery" element={<Gallery />} />
+      <Route path="gallery" element={<Events />} />
       <Route path="contact" element={<Contact />} />
     </Route>
   )
