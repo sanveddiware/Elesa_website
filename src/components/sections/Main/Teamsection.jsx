@@ -2,8 +2,6 @@ import React from "react";
 import ShinyText from "../../UI/Shinytext";
 
 const TeamSection = ({ team, title, quote }) => {
-  const isSmallTeam = team.length <= 2;
-
   return (
     <div className="py-16 text-white">
       {/* Title */}
@@ -23,13 +21,14 @@ const TeamSection = ({ team, title, quote }) => {
         </div>
       )}
 
-      {/* Auto layout */}
+      {/* Auto layout grid */}
       <div
-        className={`${
-          isSmallTeam
-            ? "flex flex-wrap justify-center gap-10 max-w-4xl mx-auto px-4"
-            : "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 max-w-6xl mx-auto px-4"
-        }`}
+        className={`
+          grid gap-10 px-4 mx-auto
+          ${team.length === 1 ? "grid-cols-1 max-w-sm" : ""}
+          ${team.length === 2 ? "grid-cols-1 sm:grid-cols-2 max-w-4xl" : ""}
+          ${team.length >= 3 ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-6xl" : ""}
+        `}
       >
         {team.map((member, idx) => (
           <div
