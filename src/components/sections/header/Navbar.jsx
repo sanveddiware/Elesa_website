@@ -18,6 +18,7 @@ const Navbar = () => {
     }
   }, [isOpen]);
 
+  // 🔽 Detect scroll
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -26,6 +27,7 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // ✅ Link styles
   const linkClass = ({ isActive }) =>
     `text-xl transition ${
       isActive
@@ -41,53 +43,59 @@ const Navbar = () => {
     }`;
 
   return (
-    <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/20 backdrop-blur-md shadow-md"
-          : "bg-transparent shadow-none"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24">
-          {/* Logo */}
-          <div className="flex items-center">
-            <img src={logo} alt="Club Logo" className="h-26 w-auto mr-4" />
-          </div>
+    <>
+      {/* Navbar */}
+      <nav
+        className={`fixed w-full z-50 transition-all duration-300 ${
+          scrolled
+            ? "bg-white/20 backdrop-blur-md shadow-md"
+            : "bg-transparent shadow-none"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-24">
+            {/* Logo */}
+            <div className="flex items-center">
+              <img src={logo} alt="Club Logo" className="h-12 w-auto mr-4" />
+            </div>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
-            <NavLink to="/" className={linkClass}>
-              Home
-            </NavLink>
-            <NavLink to="/about" className={linkClass}>
-              About
-            </NavLink>
-            <NavLink to="/events" className={linkClass}>
-              Events
-            </NavLink>
-            <NavLink to="/electrovert" className={linkClass}>
-              Electrovert
-            </NavLink>
-            <NavLink to="/contact" className={linkClass}>
-              Contact
-            </NavLink>
-          </div>
+            {/* Desktop Menu */}
+            <div className="hidden md:flex space-x-8">
+              <NavLink to="/" className={linkClass}>
+                Home
+              </NavLink>
+              <NavLink to="/about" className={linkClass}>
+                About
+              </NavLink>
+              <NavLink to="/events" className={linkClass}>
+                Events
+              </NavLink>
+              <NavLink to="/electrovert" className={linkClass}>
+                Electrovert
+              </NavLink>
+              <NavLink to="/contact" className={linkClass}>
+                Contact
+              </NavLink>
+            </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button onClick={toggleMenu} className="text-white focus:outline-none">
-              {isOpen ? <X size={28} /> : <Menu size={28} />}
-            </button>
+            {/* Mobile Menu Button */}
+            <div className="md:hidden">
+              <button
+                onClick={toggleMenu}
+                className="text-white focus:outline-none"
+              >
+                {isOpen ? <X size={28} /> : <Menu size={28} />}
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </nav>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Drawer (now OUTSIDE nav) */}
       <div
         className={`fixed top-0 right-0 h-full w-64 
-          bg-gradient-to-br from-black/90 via-gray-900/80 to-black/60 
-          backdrop-blur-md transform transition-transform duration-300 ease-in-out md:hidden
+          bg-gradient-to-b from-black via-gray-900 to-black 
+          shadow-xl transform transition-transform duration-300 ease-in-out md:hidden z-50
           ${isOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="flex justify-end p-4">
@@ -113,7 +121,7 @@ const Navbar = () => {
           </NavLink>
         </div>
       </div>
-    </nav>
+    </>
   );
 };
 
