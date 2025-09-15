@@ -5,11 +5,11 @@ import { Instagram, Linkedin, Facebook } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#120012] text-gray-300 py-8 px-4 md:px-16">
+    <footer className="bg-[#070122] text-gray-300 py-8 px-4 md:px-16">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         {/* Logo / Brand */}
         <div className="flex flex-col items-start">
-  <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-purple-500 to-fuchsia-400 bg-clip-text text-transparent">
+  <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
     ELESA
   </h1>
   <p className="text-white text-base mt-2">
@@ -19,7 +19,7 @@ const Footer = () => {
 
         {/* Links */}
         <div className="flex flex-wrap justify-center md:justify-end gap-6">
-            <h1 className="text-xl font-bold bg-gradient-to-r from-purple-400 via-purple-500 to-fuchsia-400 bg-clip-text text-transparent">
+            <h1 className="text-xl font-bold bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
     Follow us on:
   </h1>
           <a 

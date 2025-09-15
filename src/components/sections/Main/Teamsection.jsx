@@ -5,13 +5,13 @@ const TeamSection = ({ team, title, quote }) => {
   return (
     <div className="py-16 text-white">
       {/* Title */}
-      <h2 className="text-5xl font-extrabold text-center mb-6 bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 bg-clip-text text-transparent">
+      <h2 className="text-5xl font-extrabold text-center mb-6 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
         {title}
       </h2>
 
       {/* Shiny subtitle (quote) */}
       {quote && (
-        <div className="text-3xl md:text-4xl font-semibold mb-12 text-center text-gray-300">
+        <div className="text-3xl md:text-4xl font-semibold mb-12 text-center ">
           <ShinyText
             text={quote}
             disabled={false}
@@ -34,7 +34,7 @@ const TeamSection = ({ team, title, quote }) => {
           <div
             key={idx}
             className="relative rounded-2xl p-6 flex flex-col items-center text-center 
-                       bg-gradient-to-br from-white/10 via-white/5 to-transparent 
+                        
                        backdrop-blur-xl shadow-lg 
                        border border-white/20 
                        hover:scale-105 hover:shadow-red-400/30 transition-transform duration-300"

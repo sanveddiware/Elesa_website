@@ -31,14 +31,14 @@ const Navbar = () => {
   const linkClass = ({ isActive }) =>
     `text-xl transition ${
       isActive
-        ? "bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent font-semibold"
+        ? "bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent font-semibold"
         : "text-white hover:text-blue-400"
     }`;
 
   const mobileLinkClass = ({ isActive }) =>
     `block px-4 py-3 text-lg transition ${
       isActive
-        ? "bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent font-semibold"
+        ? "bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent font-semibold"
         : "text-white hover:bg-white/10"
     }`;
 
@@ -56,7 +56,7 @@ const Navbar = () => {
           <div className="flex justify-between items-center h-24">
             {/* Logo */}
             <div className="flex items-center">
-              <img src={logo} alt="Club Logo" className="h-12 w-auto mr-4" />
+              <img src={logo} alt="Club Logo" className="h-25 w-auto mr-4" />
             </div>
 
             {/* Desktop Menu */}

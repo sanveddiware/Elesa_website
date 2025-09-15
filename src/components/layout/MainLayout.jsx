@@ -16,9 +16,14 @@ function MainLayout() {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <WavyBackground />
-      {!isMobile && <SplashCursor />} {/* Disable on mobile */}
+    <div className="relative flex flex-col min-h-screen">
+      {/* Fixed Background */}
+      <div className="fixed inset-0 -z-10">
+        <WavyBackground />
+      </div>
+
+      {/* Foreground content */}
+      {/* {!isMobile && <SplashCursor />} Disable on mobile */}
       <Navbar />
       <main className="flex-grow pt-20">
         <Outlet />

@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className="py-16 text-white">
       {/* Title */}
-      <h2 className="text-5xl font-extrabold text-center mb-6 bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 bg-clip-text text-transparent">
+      <h2 className="text-5xl font-extrabold text-center mb-6 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
         Meet the Team
       </h2>
 

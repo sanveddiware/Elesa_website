@@ -21,7 +21,7 @@ const EventCard = ({ title, date, imageUrl, link }) => {
 
         {/* Event Info */}
         <div className="flex-1 p-6 text-white text-center md:text-left">
-          <h2 className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-red-500 to-orange-400 bg-clip-text text-transparent">
+          <h2 className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
             {title}
           </h2>
           {date && <p className="text-gray-200 mt-2">{date}</p>}
