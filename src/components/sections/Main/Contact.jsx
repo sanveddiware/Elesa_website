@@ -40,39 +40,39 @@ const ContactSection = () => {
             {/* Name */}
             <div>
               <label className="block mb-2 text-sm font-medium">
-                Your Name <span className="text-red-500">*</span>
+                Your Name <span className="text-blue-500">*</span>
               </label>
               <input
                 type="text"
                 placeholder="Enter your name"
                 required
-                className="w-full p-4 rounded-lg bg-black/40 border border-gray-600 text-white focus:outline-none focus:border-red-400"
+                className="w-full p-4 rounded-lg bg-black/40 border border-gray-600 text-white focus:outline-none focus:border-blue-400"
               />
             </div>
 
             {/* Email */}
             <div>
               <label className="block mb-2 text-sm font-medium">
-                Your Email <span className="text-red-500">*</span>
+                Your Email <span className="text-blue-500">*</span>
               </label>
               <input
                 type="email"
                 placeholder="Enter your email"
                 required
-                className="w-full p-4 rounded-lg bg-black/40 border border-gray-600 text-white focus:outline-none focus:border-red-400"
+                className="w-full p-4 rounded-lg bg-black/40 border border-gray-600 text-white focus:outline-none focus:border-blue-400"
               />
             </div>
 
             {/* Message */}
             <div>
               <label className="block mb-2 text-sm font-medium">
-                Your Message <span className="text-red-500">*</span>
+                Your Message <span className="text-blue-500">*</span>
               </label>
               <textarea
                 rows="4"
                 placeholder="Type your message here..."
                 required
-                className="w-full p-4 rounded-lg bg-black/40 border border-gray-600 text-white focus:outline-none focus:border-red-400"
+                className="w-full p-4 rounded-lg bg-black/40 border border-gray-600 text-white focus:outline-none focus:border-blue-400"
               ></textarea>
             </div>
 

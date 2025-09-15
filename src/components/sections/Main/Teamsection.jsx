@@ -34,10 +34,9 @@ const TeamSection = ({ team, title, quote }) => {
           <div
             key={idx}
             className="relative rounded-2xl p-6 flex flex-col items-center text-center 
-                        
-                       backdrop-blur-xl shadow-lg 
-                       border border-white/20 
-                       hover:scale-105 hover:shadow-red-400/30 transition-transform duration-300"
+             backdrop-blur-xl shadow-lg 
+             border border-white/20 
+             hover:scale-105 hover:shadow-[0_10px_25px_rgba(59,130,246,0.3)] transition-transform duration-300"
           >
             {/* Shiny overlay */}
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-transparent via-white/10 to-transparent opacity-20 pointer-events-none"></div>

@@ -8,7 +8,8 @@ const EventCard = ({ title, date, imageUrl, link }) => {
       rel="noopener noreferrer"
       className="block px-4" // ✅ small padding for mobile
     >
-      <div className="flex flex-col md:flex-row items-center bg-white/10 backdrop-blur-md rounded-xl shadow-lg overflow-hidden w-full max-w-4xl mx-auto mb-6 border border-white/20 hover:shadow-2xl transition-shadow duration-300">
+      <div className="flex flex-col md:flex-row items-center bg-white/10 backdrop-blur-md rounded-xl shadow-lg overflow-hidden w-full max-w-4xl mx-auto mb-6 border border-white/20 
+  hover:shadow-[0_10px_25px_rgba(59,130,246,0.5)] transition-shadow duration-300">
         
         {/* Event Image */}
         <div className="w-full md:w-1/3 overflow-hidden">
