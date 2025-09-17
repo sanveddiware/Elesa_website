@@ -122,9 +122,17 @@ const Navbar = () => {
           <NavLink to="/events" className={mobileLinkClass} onClick={() => setIsOpen(false)}>
             Events
           </NavLink>
-          <NavLink to="/electrovert" className={mobileLinkClass} onClick={() => setIsOpen(false)}>
-            Electrovert
-          </NavLink>
+         <a
+  href="https://electrovert-website.vercel.app/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block px-4 py-3 text-lg text-white hover:bg-white/10 transition"
+  onClick={() => setIsOpen(false)}
+>
+  Electrovert
+</a>
+
+
           <NavLink to="/contact" className={mobileLinkClass} onClick={() => setIsOpen(false)}>
             Contact
           </NavLink>
