@@ -70,9 +70,17 @@ const Navbar = () => {
               <NavLink to="/events" className={linkClass}>
                 Events
               </NavLink>
-              <NavLink to="/electrovert" className={linkClass}>
+              {/* <NavLink to="/electrovert" className={linkClass}>
                 Electrovert
-              </NavLink>
+              </NavLink> */}
+              <a 
+  href="https://electrovert-website.vercel.app/" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  className={linkClass}
+>
+  Electrovert
+</a>
               <NavLink to="/contact" className={linkClass}>
                 Contact
               </NavLink>
