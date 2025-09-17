@@ -73,14 +73,15 @@ const Navbar = () => {
               {/* <NavLink to="/electrovert" className={linkClass}>
                 Electrovert
               </NavLink> */}
-              <a 
-  href="https://electrovert-website.vercel.app/" 
-  target="_blank" 
-  rel="noopener noreferrer" 
-  className={linkClass}
+              <a
+  href="https://electrovert-website.vercel.app/"
+  target="_blank"
+  
+  className={`${linkClass} text-xl  text-white hover:text-blue-400`}
 >
   Electrovert
 </a>
+
               <NavLink to="/contact" className={linkClass}>
                 Contact
               </NavLink>
