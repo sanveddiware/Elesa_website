@@ -18,7 +18,7 @@ export default defineConfig({
   server:{
     proxy:{
       "/api":{
-          target: "http://localhost:5000", // your Express backend
+          target: "https://contactmailelesa-6798yma6w-sanved-diwares-projects.vercel.app/", // your Express backend
           changeOrigin: true,
           secure: false,
       }
