@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Mail, MapPin, Instagram, Linkedin, Facebook } from "lucide-react";
-
+import dotenv from 'dotenv';
+dotenv.config();
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -19,11 +20,12 @@ const ContactSection = () => {
     setStatus("Sending...");
 
     try {
-      const res = await fetch("/api/send", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const res = await fetch(`${process.env.VITE_API_URL}/send`, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(formData),
+});
+
 
       const data = await res.json();
       if (data.success) {
