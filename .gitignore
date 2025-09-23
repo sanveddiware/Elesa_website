@@ -1,7 +1,8 @@
 # Logs
-.env
 /.env
+.env
 *env
+/vite.config.js
 logs
 *.log
 npm-debug.log*
