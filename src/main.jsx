@@ -13,8 +13,12 @@ import {
   createRoutesFromElements,
   Route,
   RouterProvider,
+  Router,
 } from "react-router-dom";
 import Events from './components/sections/Main/Events.jsx';
+
+import EventDetail from './components/sections/Main/Eventdetail.jsx';
+import ScrollToTop from './components/sections/Main/ScrollToTop.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,9 +26,11 @@ const router = createBrowserRouter(
       <Route path="" element={<Home />} />  
       <Route path="about" element={<About />} />
       <Route path="events" element={<Events/>} />
+      <Route path="events/:id" element={<EventDetail />} />
       <Route path="electrovert" element={<Electrovert />} />
       <Route path="contact" element={<Contact />} />
     </Route>
+   
   )
 );
 

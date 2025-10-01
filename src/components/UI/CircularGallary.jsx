@@ -1,5 +1,6 @@
 import { Camera, Mesh, Plane, Program, Renderer, Texture, Transform } from 'ogl';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef,useState } from 'react';
+
 
 function debounce(func, wait) {
   let timeout;
@@ -373,8 +374,9 @@ class App {
   }
   onTouchMove(e) {
     if (!this.isDown) return;
+    e.preventDefault();
     const x = e.touches ? e.touches[0].clientX : e.clientX;
-    const distance = (this.start - x) * (this.scrollSpeed * 0.025);
+    const distance = (this.start - x) * (this.scrollSpeed * 0.08);
     this.scroll.target = this.scroll.position + distance;
   }
   onTouchUp() {
@@ -463,8 +465,17 @@ export default function CircularGallery({
   scrollEase = 0.05
 }) {
   const containerRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
-    const app = new App(containerRef.current, { items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase });
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  useEffect(() => {
+    const app = new App(containerRef.current, { items, bend: isMobile ? 0 : bend, textColor, borderRadius, font, scrollSpeed, scrollEase });
     return () => {
       app.destroy();
     };

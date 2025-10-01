@@ -4,9 +4,11 @@ import Footer from "../sections/footer/Footer.jsx";
 import { Outlet } from "react-router-dom";
 import SplashCursor from "../UI/SplashCursor.jsx";
 import { WavyBackground } from "../UI/WavyBackground";
+import { useLocation } from "react-router-dom";
 
 function MainLayout() {
   const [isMobile, setIsMobile] = useState(false);
+   const { pathname } = useLocation();
 
   useEffect(() => {
     const checkScreen = () => setIsMobile(window.innerWidth < 768);
@@ -14,6 +16,11 @@ function MainLayout() {
     window.addEventListener("resize", checkScreen);
     return () => window.removeEventListener("resize", checkScreen);
   }, []);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" }); 
+  }, [pathname]);
+
 
   return (
     <div className="relative flex flex-col min-h-screen">
