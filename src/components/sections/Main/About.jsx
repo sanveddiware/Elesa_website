@@ -12,9 +12,9 @@ const About = () => {
       </h2>
 
       <TeamSection team={team1} title="Advisors" quote={quotes.inspiration} />
-      <TeamSection team={team2} title="Joint Board" />
+      <TeamSection team={team2} title="Mentor Board" />
       <TeamSection team={team3} title="Cheif Board" />
-      <TeamSection team={team3} title="Mentor Board" />
+      <TeamSection team={team3} title="Joint Board" />
 
     </div>
   );
