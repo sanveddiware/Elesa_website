@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 
 // Event images keyed by event name
 const eventImages = {
@@ -23,7 +24,7 @@ const eventImages = {
     "https://images.unsplash.com/photo-1485217988980-11786ced9454",
     "https://images.unsplash.com/photo-1470770841072-f978cf4d019e",
   ],
-  "food-carnival":[
+  "food-carnival": [
     "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
     "https://images.unsplash.com/photo-1519985176271-adb1088fa94c",
     "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
@@ -38,23 +39,19 @@ const eventImages = {
 function EventDetail() {
   const { id } = useParams(); // id = "music-concert" etc.
 
-  // 🔍 Debugging logs
-  console.log("URL param id:", id); // shows what ID is coming from URL
-  console.log("eventImages keys:", Object.keys(eventImages)); // shows available keys
-  console.log("Images found:", eventImages[id]); // shows matched images array or undefined
-
   const images = eventImages[id] || [];
 
   return (
     <div className="p-6 min-h-screen">
-      <div className="max-w-7xl mx-auto">
-        {/* Circular Back Button */}
+      <div className="max-w-7xl mx-auto relative">
+
+        {/* Back Button with icon */}
         <Link
           to="/events"
-          className="flex items-center justify-center w-12 h-12 mb-6 rounded-full bg-white/20 backdrop-blur-lg text-white hover:bg-white/30 transition-all duration-300 shadow-lg text-4xl font-bold hover:scale-110"
-          style={{ lineHeight: 1 }}
+          className="absolute top-4 left-4 flex items-center gap-2 px-3 py-2 rounded-full bg-white/20 backdrop-blur-lg text-white hover:bg-white/30 transition-all duration-300 shadow-lg"
         >
-          ←
+          <ArrowLeft size={18} />
+          Back
         </Link>
 
         <h1 className="text-4xl font-bold text-white text-center mb-10">
