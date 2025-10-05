@@ -57,11 +57,13 @@ import aakil from '../src/assets/Joints/Aakil.jpg';
 import madhura from '../src/assets/Joints/madhura.jpg';
 import rohan from '../src/assets/Joints/rohan.jpg';
 import pranjali from '../src/assets/Joints/pranjali.jpg'
+import MevekariSir from '../src/assets/Faculty/MevekariSir.jpg';
+import SDRuikarSir from '../src/assets/Faculty/SDRuikarSir.jpg';
 
 
 export const team1 = [
-  { name: "Alice Sharma", role: "President", photo: "https://randomuser.me/api/portraits/women/68.jpg" },
-  { name: "Rohan Gupta", role: "Vice President", photo: "https://randomuser.me/api/portraits/men/45.jpg" },
+  { name: "Dr. S. D. Ruikar", role: "HOD", photo: SDRuikarSir},
+  { name: "Mr. R.G. Mevekari", role: "Staff Advisor", photo: MevekariSir  },
 ];
 
 export const team2 = [
