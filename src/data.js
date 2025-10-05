@@ -45,7 +45,7 @@ import pranav from '../src/assets/Joints/pranav.jpg';
 import Atharv from '../src/assets/Joints/Atharv.jpg';
 import Manasi from '../src/assets/Joints/manasi.png';
 import nirav from '../src/assets/Joints/nirav.jpg';
-import Shrenika from '../src/assets/Joints/Shrenika.jpg';
+import Shrenika from '../src/assets/Joints/shrenika.jpg';
 import Sumit from '../src/assets/Joints/sumit.jpg';
 import Dhananjay from '../src/assets/Joints/Dhananjay.jpg';
 import chinmay from '../src/assets/Joints/chinmay.jpg';
