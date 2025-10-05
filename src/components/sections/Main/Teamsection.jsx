@@ -44,6 +44,7 @@ const TeamSection = ({ team, title, quote }) => {
             <img
               src={member.photo}
               alt={member.name}
+              loading="lazy"
               className="w-32 h-32 object-cover rounded-full mb-4 shadow-md border-4 border-white/20"
             />
             <h3 className="text-2xl font-bold">{member.name}</h3>
