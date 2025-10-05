@@ -1,7 +1,11 @@
 import { Camera, Mesh, Plane, Program, Renderer, Texture, Transform } from 'ogl';
 import { useEffect, useRef,useState } from 'react';
-
-
+import Roboholic from '../../assets/Activities/Roboholic.jpg';
+import Meraki from '../../assets/Activities/Meraki.jpg';
+import Placement from '../../assets/Activities/Placement.jpg';
+import Teachers from '../../assets/Activities/Teachers.jpg';
+import Raspi from '../../assets/Activities/Raspberry.jpg';
+import verilog from  '../../assets/Activities/Verilog.jpg';
 function debounce(func, wait) {
   let timeout;
   return function (...args) {
@@ -333,18 +337,18 @@ class App {
   }
   createMedias(items, bend = 1, textColor, borderRadius, font) {
     const defaultItems = [
-      { image: `https://picsum.photos/seed/1/800/600?grayscale`, text: 'Bridge' },
-      { image: `https://picsum.photos/seed/2/800/600?grayscale`, text: 'Desk Setup' },
-      { image: `https://picsum.photos/seed/3/800/600?grayscale`, text: 'Waterfall' },
-      { image: `https://picsum.photos/seed/4/800/600?grayscale`, text: 'Strawberries' },
-      { image: `https://picsum.photos/seed/5/800/600?grayscale`, text: 'Deep Diving' },
-      { image: `https://picsum.photos/seed/16/800/600?grayscale`, text: 'Train Track' },
-      { image: `https://picsum.photos/seed/17/800/600?grayscale`, text: 'Santorini' },
-      { image: `https://picsum.photos/seed/8/800/600?grayscale`, text: 'Blurry Lights' },
-      { image: `https://picsum.photos/seed/9/800/600?grayscale`, text: 'New York' },
-      { image: `https://picsum.photos/seed/10/800/600?grayscale`, text: 'Good Boy' },
-      { image: `https://picsum.photos/seed/21/800/600?grayscale`, text: 'Coastline' },
-      { image: `https://picsum.photos/seed/12/800/600?grayscale`, text: 'Palm Trees' }
+      { image: Roboholic, text: 'Roboholic' },
+      { image: Meraki, text: 'Meraki' },
+      { image: Placement, text: 'Placement Talk' },
+      { image: Teachers, text: "Teacher's Day" },
+      { image: Raspi, text: 'Raspberry Pie Session' },
+      { image: verilog, text: 'Verilog & VLSI' },
+      // { image: `https://picsum.photos/seed/17/800/600?grayscale`, text: 'Santorini' },
+      // { image: `https://picsum.photos/seed/8/800/600?grayscale`, text: 'Blurry Lights' },
+      // { image: `https://picsum.photos/seed/9/800/600?grayscale`, text: 'New York' },
+      // { image: `https://picsum.photos/seed/10/800/600?grayscale`, text: 'Good Boy' },
+      // { image: `https://picsum.photos/seed/21/800/600?grayscale`, text: 'Coastline' },
+      // { image: `https://picsum.photos/seed/12/800/600?grayscale`, text: 'Palm Trees' }
     ];
     const galleryItems = items && items.length ? items : defaultItems;
     this.mediasImages = galleryItems.concat(galleryItems);

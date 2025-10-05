@@ -23,7 +23,7 @@ function EventCard({ title, date, description, imageUrl }) {
           <h2 className="text-lg md:text-2xl font-bold text-blue-400">{title}</h2>
           <p className="text-white/90 text-sm md:text-base">{date}</p>
           {description && (
-            <p className="text-white/70 text-sm md:text-base line-clamp-3">
+            <p className="text-white/70 text-sm md:text-base line-clamp-6">
               {description}
             </p>
           )}

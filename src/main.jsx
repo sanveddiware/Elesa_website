@@ -25,6 +25,8 @@ const router = createBrowserRouter(
     <Route path="/" element={<MainLayout />}>
       <Route path="" element={<Home />} />  
       <Route path="about" element={<About />} />
+      <Route path="/about/*" element={<About />} />
+
       <Route path="events" element={<Events/>} />
       <Route path="events/:id" element={<EventDetail />} />
       <Route path="electrovert" element={<Electrovert />} />
