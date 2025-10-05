@@ -47,13 +47,13 @@ import Manasi from '../src/assets/Joints/manasi.png';
 import nirav from '../src/assets/Joints/nirav.jpg';
 import Shrenika from '../src/assets/Joints/shrenika.jpg';
 import Sumit from '../src/assets/Joints/sumit.jpg';
-import Dhananjay from '../src/assets/Joints/Dhananjay.jpg';
+import Dhananjay from '../src/assets/Joints/dhananjay.jpg';
 import chinmay from '../src/assets/Joints/chinmay.jpg';
-import mith from '../src/assets/Joints/Mithilesh.jpg';
+import mith from '../src/assets/Joints/mithilesh.jpg';
 import siddhika from '../src/assets/Joints/siddhika.jpg';
 import ritesh from '../src/assets/Joints/ritesh.jpg';
 import omkar from '../src/assets/Joints/omkarmali.jpg';
-import aakil from '../src/assets/Joints/aakil.jpg';
+import aakil from '../src/assets/Joints/Aakil.jpg';
 import madhura from '../src/assets/Joints/madhura.jpg';
 import rohan from '../src/assets/Joints/rohan.jpg';
 import pranjali from '../src/assets/Joints/pranjali.jpg'
